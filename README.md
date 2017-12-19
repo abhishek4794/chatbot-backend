@@ -1,4 +1,4 @@
-# Actions on Google Silly Name Maker Sample using Node.js
+# Sample News-bot using Node.js and dialogFlow
 
 This is a super simple Action, built using API.AI and Node.js, to generate a
 news based on your input.
