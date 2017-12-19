@@ -41,30 +41,30 @@ module.exports.init = function(runtime) {
 function categoryNews(assistant, accesstoken) {
     let catName = assistant.getArgument('categoryName').toLowerCase();
 
-    let url = 'https://newsapi.org/v1/sources?language=en&category='+catName 
+    let url = 'https://newsapi.org/v1/sources?language=en&category=' + catName
     let obj = {
         url: url,
         proxy: null,
-	method:'GET',
+        method: 'GET',
     }
 
-	
-        
-	http.request(obj, (err, body) => {
-        
-	if (err) {
-            console.log(err,'<--- err')
+
+
+    http.request(obj, (err, body) => {
+
+        if (err) {
+            console.log(err, '<--- err')
 
         }
 
         try {
 
 
-	catData = JSON.parse(body)
-	
-	console.log(catData.sources[0].description)	
-	
-	assistant.ask('<speak>Following are some News of ' + catName + '<break time="1s" />' +catData.sources[0].description + '</speak>');				
+            catData = JSON.parse(body)
+
+            console.log(catData.sources[0].description)
+
+            assistant.ask('<speak>Following are some News of ' + catName + '<break time="1s" />' + catData.sources[0].description + '</speak>');
 
         } catch (e) {
 
@@ -74,4 +74,3 @@ function categoryNews(assistant, accesstoken) {
     })
 
 }
-

@@ -57,7 +57,7 @@ function publicationNews(assistant, accesstoken) {
         method: 'GET',
     }
 
-    
+
 
     http.request(obj, (err, body) => {
 
@@ -70,7 +70,7 @@ function publicationNews(assistant, accesstoken) {
 
 
             let pubData = JSON.parse(body)
-		console.log(pubData)
+            console.log(pubData)
             console.log(pubData.articles[0].title)
             assistant.ask('<speak>Following are some News of ' + pubName + '<break time="1s" />' + pubData.articles[0].title + '</speak>');
 
