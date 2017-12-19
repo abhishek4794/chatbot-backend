@@ -11,7 +11,7 @@ news based on your input.
 
 See the developer guide and release notes at [https://developers.google.com/actions/](https://developers.google.com/actions/) for more details.
 
-### Steps
+### Steps for setting up bot on dialogflow.com 
  1. Create a new agent in API.AI [https://api.ai](https://api.ai).
  1. Click on the project gear icon to see the project settings.
  1. Select "Export and Import".
@@ -26,5 +26,13 @@ See the developer guide and release notes at [https://developers.google.com/acti
  1. Authorize and preview the action in the [web simulator](https://developers.google.com/actions/tools/web-simulator).
 
 For more detailed information on deployment, see the [documentation](https://developers.google.com/actions/samples/).
+
+### Steps for setting up backend 
+ 1. Install Node.js and npm
+ 1. npm install 
+ 1. node server.js
+ 1. Install ngrok
+ 1. Run ./ngrok http {{http_port}}
+ 
 
 
